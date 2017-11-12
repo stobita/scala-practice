@@ -2,6 +2,11 @@ object ScalaPractice extends App{
   println("Hello Scala!")
   println("素数計算")
   println(getPrimeNumbers())
+  println("フィボナッチ")
+  for( i <- 1 to 30 ){
+    print(getFibonacci(i) + "\t")
+  }
+
   // 素数計算
   def getPrimeNumbers() = {
     print(2 + "\t")
@@ -16,5 +21,14 @@ object ScalaPractice extends App{
         print(i + "\t")
       }
     }
+  }
+  // フィボナッチ
+  def getFibonacci( num: Int ): Int = {
+    if( num == 1 ){
+      return 1
+    } else if( num == 2 ){
+      return 1
+    }
+    return getFibonacci( num - 1 ) + getFibonacci( num - 2 )
   }
 }
